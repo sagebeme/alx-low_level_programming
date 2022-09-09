@@ -1,3 +1,4 @@
+All the documentation for the code
 0 Random number that is either positive or negative
 
 1 printing the last 2 digits of a randomly generated number 
