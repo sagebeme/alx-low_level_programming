@@ -8,3 +8,4 @@ Pointers and strings
 	Return a pointer to the resulting string dest
 2 - C function that copies a string
 3 - C function that compares two strings
+4 - C function that reverses the content of an array of integers
