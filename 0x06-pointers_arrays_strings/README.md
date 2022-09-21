@@ -9,3 +9,5 @@ Pointers and strings
 2 - C function that copies a string
 3 - C function that compares two strings
 4 - C function that reverses the content of an array of integers
+5 - C function that changes all lowercase letters of a string to uppercase
+6 - C
