@@ -7,4 +7,5 @@
 4 - C function that searches a string for any of a set of bytes. 
 5 - C function that locates a substring.
 6 - C function that prints the chessboard.
-7 - C 
+7 - C function that prints the sum of the two diagonals of a square matrix of integers
+8 - C  
