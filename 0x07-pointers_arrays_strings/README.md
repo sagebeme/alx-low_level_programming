@@ -8,4 +8,5 @@
 5 - C function that locates a substring.
 6 - C function that prints the chessboard.
 7 - C function that prints the sum of the two diagonals of a square matrix of integers
-8 - C  
+8 - C function that sets the value of a pointer to a char.
+9 - C file that contains the password for the crackme2 executable. 
