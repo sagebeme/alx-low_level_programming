@@ -6,5 +6,5 @@
 3 - C function that gets the length of a prefix substring. 
 4 - C function that searches a string for any of a set of bytes. 
 5 - C function that locates a substring.
-6 - C 
+6 - C function that prints the chessboard.
 7 - C 
