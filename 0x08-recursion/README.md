@@ -5,5 +5,5 @@
 3 - C Returns the factorial of a given number.
 4 - C Returns the value of x raised to the power of y.
 5 - c function that returns the natural square root of a number.
-6 - C 
+6 - C function that returns 1 if the input integer is a prime number, otherwise 	return 0
 7 - C 
