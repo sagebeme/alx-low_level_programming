@@ -2,15 +2,15 @@
 
 /**
 * main - prints its name follwoed by a newline
-* @argc: number of arguments
-* @argv: the vector that hold the arguments
+* @argc: number of arguments supplied to pointer
+* @argv: an arry of ponters to the argument
 *
-* Description: prints the current directory and the name like ./name
 * Return: returns the name.
 */
 
-int main(int argc, char **argv)
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	printf("%s\n", argv[argc - 1]);
+	printf("%s\n", argv[0]);
+
 	return (0);
 }
