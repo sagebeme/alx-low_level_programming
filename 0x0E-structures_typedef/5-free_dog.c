@@ -1,20 +1,19 @@
 #include <stdlib.h>
 #include "dog.h"
-
 /**
- * free_dog - free struct pointer
+ * free_dog - frees dog
  *
- * @d: pointer to free
+ * @d: variable to free
  *
- * Return: nothing
+ * Return: void
  */
-
 void free_dog(dog_t *d)
 {
+	/* free memory from the variables to the pointer of dog_t */
 	if (d)
 	{
 		free(d->name);
-		free(d->age);
 		free(d->owner);
+		free(d);
 	}
 }
