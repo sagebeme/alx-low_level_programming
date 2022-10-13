@@ -1,5 +1,5 @@
 /**
- * print name function- to print name
+ * print_name - function to print name
  *
  * @name: name of the person
  *@f: function poinyer that doesn't return anything
@@ -9,6 +9,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if ( f && name )
+	if (f && name)
 		f(name);
 }
