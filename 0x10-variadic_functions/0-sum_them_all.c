@@ -11,13 +11,13 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
-	unsigned int param, sum = 0;
+	unsigned int p, sum = 0;
 
 	/* initialize the argument list from the start */
 	va_start(ap, n);
 
 	/* iterate through all parameter values*/
-	for (param = 0; param < n; param++)
+	for (p = 0; p < n; p++)
 		/* get the next parameter velue and add it to sum*/
 		sum += va_arg(ap, int);
 	/*Clean up*/
