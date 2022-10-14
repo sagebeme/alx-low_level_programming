@@ -1,7 +1,7 @@
 #include <stdarg.h>
 
 /**
- * sum_the_all - adds all the parameters
+ * sum_them_all - adds all the parameters
  *
  * @n: sum of input variables
  *
