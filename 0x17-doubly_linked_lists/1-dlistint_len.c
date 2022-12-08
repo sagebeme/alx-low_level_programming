@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * print_dlistint - print all the elements in a d list
+ * dlistint_len - print all the elements in a d list
  * @h: the head node
  * Return: the number of elements in the linked lists
  */
 
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	unsigned int count = 0;
 
