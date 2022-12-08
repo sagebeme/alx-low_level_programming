@@ -47,11 +47,3 @@
 - [0x15](./0x15-file_io) : File I/O.
 
 ---
-
-# More Resources
-
-- [Pointers and Arrays](./PointerArrays) : Code snippets and notes on Pointers and Arrays from Concept Page.
-- [Data Structures](./DataStructures) : Code snippets and notes on data structures.
-- [Dynamic Memory Allocation](./dynamic_memory_alloc) : Code snippets and notes on how dynamic memory allocation works with `malloc` and `free`.
-- [Heap vs Stack](./heap_stack) : Code snippets and notes on what is a heap, a stack and how they work.
-- [Simple Shell Concepts](./simple_shell_concepts) : Code snippets and notes on the concept for the simple shell project.
