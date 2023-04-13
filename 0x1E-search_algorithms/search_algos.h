@@ -4,23 +4,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * struct singly_list - Singly linked list
- * @node_int: integer stored at the node
+ * struct listint_s - Singly linked list
+ * @n: integer stored at the node
  * @index: index of node in list
  * @next: pointer to next node
  *
  * Description: singly linked list node sturcture
  */
 
-typedef struct singly_list
+typedef struct listint_s
 {
 	/* integer stored at the node*/
-	int node_int;
+	int n;
 	/* index of the node in the list*/
 	size_t index;
 	/* pointer to next node*/
-	struct singly_list *next;
-}singly_list;
+	struct listint_s *next;
+}listint_s;
+
+/**
+ * struct skiplist_s - Singly linked list with an express lane
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ * @express: Pointer to the next node in the express lane
+ *
+ * Description: singly linked list node structure with an express lane
+ */
+typedef struct skiplist_s
+{
+    int n;
+    size_t index;
+    struct skiplist_s *next;
+    struct skiplist_s *express;
+} skiplist_t;
 
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
