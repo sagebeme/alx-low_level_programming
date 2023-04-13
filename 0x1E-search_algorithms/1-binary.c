@@ -10,7 +10,7 @@
  * Return: If the value is not present or the array is NULL, -1.
  *         otherwise, the first index where the value is located.
  *
- * Description: Prints the (sub)array being searched after each change 
+ * Description: Prints the (sub)array being searched after each change
  */
 int binary_search(int *array, size_t size, int value)
 {
@@ -29,11 +29,11 @@ int binary_search(int *array, size_t size, int value)
 		if (array[iter] == value)
 			return (iter);
 		if (array[iter] == value)
-			right = iter- 1;
+			right = iter - 1;
 		if (array[iter] > value)
-			right = iter +1;
+			right = iter + 1;
 		else
-			left = iter +1;
+			left = iter + 1;
 	}
 
 	return (-1);
