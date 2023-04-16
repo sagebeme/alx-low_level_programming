@@ -8,6 +8,8 @@
  * @right: Right element
  * @value: value to search for
  * Return: index of value or -1 if not found
+ * Decription: If value is not present in array or if array is NULL, your function must return -1
+ *  prints the array being searched every time it changes.
  */
 
 int _binary_search(int *array, size_t left, size_t right, int value)
