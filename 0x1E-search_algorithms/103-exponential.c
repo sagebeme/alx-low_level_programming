@@ -1,14 +1,16 @@
 #include "search_algos.h"
 
 /**
- * binary_search - searches for a value in a sorted array of integers
+ * _binary_search - searches for a value in a sorted array of integers
  * using the binary search algorithm
  * @array: array of integers
  * @left: Left element
  * @right: Right element
  * @value: value to search for
  * Return: index of value or -1 if not found
- * Decription: If value is not present in array or if array is NULL, your function must return -1
+ *
+ * Decription: If value is not present in array or if array is NULL,
+ * your function must return -1
  *  prints the array being searched every time it changes.
  */
 
@@ -44,7 +46,8 @@ int _binary_search(int *array, size_t left, size_t right, int value)
  * @array: pointer to the first element of the array
  * @size: size of the array to search in
  * @value: value to search for
- *Return: the index of the searched element
+ * Return: the index of the searched element
+ *
  */
 
 int exponential_search(int *array, size_t size, int value)
