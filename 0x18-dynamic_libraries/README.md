@@ -1,79 +1,143 @@
-<h1 class="gap">Project 0x18. C - Dynamic libraries</h1>
+0x18. Dynamic libraries
+======================
 
-<h2>Learning Objectives.</h2>
-<h3>General</h3>
+This project practices **dynamic (shared) libraries** in C: creating `.so` files with `gcc -shared -fPIC`, installing them (e.g. with `LD_LIBRARY_PATH` or system paths), and linking programs with `-lname` so they load the library at runtime.
 
-<ul>
-<li>What is a dynamic library, how does it work, how to create one, and how to use it</li>
-<li>What is the environment variable <code>$LD_LIBRARY_PATH</code> and how to use it</li>
-<li>What are the differences between static and shared libraries</li>
-<li>Basic usage <code>nm</code>, <code>ldd</code>, <code>ldconfig</code></li>
-</ul>
+Tasks
+-----
 
-<h2>Resources.</h2>
+**Task numbers:** 0, 1, 2, 3, 4, 5, 6, 9, 100, 101
 
-<p><strong>Read or watch</strong>:</p>
+### 0. Create dynamic library (sources)
 
-<ul>
-<li><a href="https://www.youtube.com/watch?v=eW5he5uFBNM" title="What is difference between Dynamic and Static library (Static and Dynamic linking)" target="_blank">What is difference between Dynamic and Static library (Static and Dynamic linking)</a> </li>
-<li><a href="https://www.google.com/search?q=linux+create+dynamic+library&cad=h" title="create dynamic libraries on Linux" target="_blank">create dynamic libraries on Linux</a> </li>
-<li><a href="https://students-support.hbtn.io/hc/en-us/articles/360023750254" title="Technical Writing" target="_blank">Technical Writing</a></li>
-</ul>
+mandatory
 
-<h2 class="gap">Tasks</h2>
-<h4 class="task">
-    0. A library is not a luxury but one of the necessities of life
-</h4>
- <p>Create the dynamic library libholberton.so containing all the functions listed below:</p>
+Compile the provided C sources with -fPIC and create a shared library (e.g. libdynamic.so). Run: `gcc -c -fPIC *.c && gcc -shared -o libdynamic.so *.o`.
 
-<pre><code>int _putchar(char c);
-int _islower(int c);
-int _isalpha(int c);
-int _abs(int n);
-int _isupper(int c);
-int _isdigit(int c);
-int _strlen(char *s);
-void _puts(char *s);
-char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
-char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
-char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept);
-char *_strstr(char *haystack, char *needle);
-</code></pre>
+**Repo:**
 
-<p>If you haven&rsquo;t coded all of the above functions create empty ones, with the right prototype.<br>
-Don&rsquo;t forget to push your <code>holberton.h</code> file in your repository, containing at least all the prototypes of the above functions.</p>
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `0-isupper.c`, `0-memset.c`, `0-strcat.c`, and other .c sources
 
-<h4 class="task">
-    1. Without libraries what have we? We have no past and no future
-</span>
-  </h4>
-<p>Create a script that creates a dynamic library called <code>liball.so</code> from all the <code>.c</code> files that are in the current directory.</p>
+### 1. create_dynamic_lib.sh
 
- <h4 class="task">
-    2. Either write something worth reading or do something worth writing
-</h4>
-<p>Write a blog post describing the differences between static and dynamic libraries. It should cover:</p>
+mandatory
 
-<ul>
-<li>Why using libraries in general</li>
-<li>How do they work</li>
-<li>How to create them (Linux only)</li>
-<li>How to use them (Linux only)</li>
-<li>What are the differences between static and dynamic libraries</li>
-<li>What are the advantages and drawbacks of each of them</li>
-</ul>
+Write a script that creates a dynamic library from all .c files in the current directory. Use -fPIC and -shared.
 
-<p>Your posts should have examples and at least one picture, at the top.
-Publish your blog post on Medium or LinkedIn, and share it at least on LinkedIn.</p>
+**Repo:**
 
-<p>When done, please add all urls below (blog post, LinkedIn post, etc.)</p>
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `1-create_dynamic_lib.sh`
 
-<p>Please, remember that these blogs must be written in English to further your technical ability in a variety of settings</p>
+### 2. Dynamic library (part 2)
+
+mandatory
+
+Add or ensure all required symbols are in the shared library (e.g. 2-strchr.c, 2-strlen.c, 2-strncpy.c). Link a program and run with LD_LIBRARY_PATH.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `2-strchr.c`, `2-strlen.c`, `2-strncpy.c`
+
+### 3. Dynamic library (part 3)
+
+mandatory
+
+Include 3-*.c sources in the library. Build and test.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `3-islower.c`, `3-puts.c`, `3-strcmp.c`, `3-strspn.c`
+
+### 4. Dynamic library (part 4)
+
+mandatory
+
+Include 4-*.c sources in the library.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `4-isalpha.c`, `4-strpbrk.c`
+
+### 5. Dynamic library (part 5)
+
+mandatory
+
+Include 5-strstr.c in the library.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `5-strstr.c`
+
+### 6. Dynamic library (part 6)
+
+mandatory
+
+Include 6-abs.c in the library.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `6-abs.c`
+
+### 9. Dynamic library (part 9)
+
+mandatory
+
+Include 9-strcpy.c in the library.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `9-strcpy.c`
+
+### 100. Dynamic library (full)
+
+mandatory
+
+Create the complete shared library (e.g. 100-operations.so or libdynamic.so) with all required symbols. Link and run a program that uses it.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `100-atoi.c`, and the created .so
+
+### 101. make_me_win (optional)
+
+optional
+
+Script or program that makes a given program "win" (e.g. inject or replace a function). See project spec.
+
+**Repo:**
+
+-   GitHub repository: `alx-low_level_programming`
+-   Directory: `0x18-dynamic_libraries`
+-   File: `101-make_me_win.sh`
+
+---
+
+**How to run / test**
+
+1. Build the shared library: `gcc -c -fPIC *.c && gcc -shared -o lib<name>.so *.o`
+2. Link: `gcc main.c -L. -l<name> -o program`
+3. Run: `LD_LIBRARY_PATH=. ./program` (or export LD_LIBRARY_PATH)
+
+**Resources**
+
+- [Program Library HOWTO (shared libraries)](https://tldp.org/HOWTO/Program-Library-HOWTO/)
+- [ld.so(8) – dynamic linker/loader (man page)](https://man7.org/linux/man-pages/man8/ld.so.8.html)
+- [GCC options: -fPIC, -shared](https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html)
